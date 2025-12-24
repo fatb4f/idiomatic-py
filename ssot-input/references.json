@@ -1,0 +1,50 @@
+{
+  "manifest_id": "python-cbia-contract-pipelines-v1-refs",
+  "generated_at": "2025-12-24T17:04:11Z",
+  "refs": [
+    {
+      "ref_id": "python-typing-docs",
+      "title": "Python typing documentation",
+      "url": "https://docs.python.org/3/library/typing.html",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "typing",
+        "contracts",
+        "python_core"
+      ]
+    },
+    {
+      "ref_id": "pydantic-v2-docs",
+      "title": "Pydantic v2 documentation",
+      "url": "https://docs.pydantic.dev/latest/",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "pydantic",
+        "validation",
+        "serialization",
+        "contracts"
+      ]
+    },
+    {
+      "ref_id": "typer-docs",
+      "title": "Typer documentation",
+      "url": "https://typer.tiangolo.com/",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "cli",
+        "typer",
+        "orchestration"
+      ]
+    },
+    {
+      "ref_id": "pytest-docs",
+      "title": "pytest documentation",
+      "url": "https://docs.pytest.org/en/stable/",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "testing",
+        "verification"
+      ]
+    }
+  ]
+}

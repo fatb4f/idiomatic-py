@@ -1,0 +1,3 @@
+[submodule "ssot"]
+	path = ssot
+	url = https://github.com/fatb4f/ssot-template.git
