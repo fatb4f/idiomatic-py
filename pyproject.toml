@@ -1,0 +1,29 @@
+[project]
+name = "cbia-track"
+version = "0.1.0"
+description = "CBIA Python learning track tooling (uv + direnv activated venv)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "ipython>=8.0",
+  "pytest>=8.0",
+  "ruff>=0.5",
+  "pyright>=1.1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501"]
+
+[tool.pyright]
+typeCheckingMode = "standard"
+pythonVersion = "3.11"
+reportMissingTypeStubs = false

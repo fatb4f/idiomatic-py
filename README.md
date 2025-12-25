@@ -1,46 +1,68 @@
-# CBIA Course Repo (Content-Generation Ready)
+# CBIA Track Tooling Pack (uv + direnv, activated venv)
 
-This is a **contentless** course repo skeleton:
-- course structure is declared in SSOT (`ssot-input/course.json`)
-- references are declared (`ssot-input/references.json`)
-- LLM generates SSOT content blocks into `ssot-input/content/`
-- CGP (as git submodule) validates + renders into `dist/`
+## Requirements
+- `uv`
+- `direnv`
+- `zellij` (optional)
+- `just` (optional, recommended)
+- `hx` and `yazi` (optional)
 
-## Layout
-```
-.
-├─ AGENTS.md
-├─ ssot/                      # git submodule (ssot-template CGP v0)
-├─ ssot-input/
-│  ├─ course.json
-│  ├─ references.json
-│  └─ content/
-├─ snapshots/                 # optional
-└─ dist/
+## One-time shell hook
+### fish
+```fish
+direnv hook fish | source
 ```
 
-## Quick start
-1) Add the SSOT submodule:
-
+### bash
 ```bash
-git submodule add <SSOT_TEMPLATE_REPO_URL> ssot
+eval "$(direnv hook bash)"
 ```
 
-2) Create a virtualenv and install CGP from the submodule:
+### zsh
+```zsh
+eval "$(direnv hook zsh)"
+```
 
+## Activate project environment
+From repo root:
 ```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -e "./ssot[dev]"
+direnv allow
 ```
 
-3) Generate content blocks (LLM) into `ssot-input/content/` following:
-- `ssot/docs/generation-prompt-contract.md`
-- `ssot/schemas/content-block.schema.json`
+This will:
+- create `.venv` using `uv`
+- install dependencies
+- export `VIRTUAL_ENV` and prepend `.venv/bin` to `PATH`
 
-4) Validate + build:
-
+## Quick commands
+### With just
 ```bash
-make validate
-make build
+just bootstrap
+just health
+just repl
+just test
+just type
+just lint
+just fmt
 ```
+
+### Without just
+```bash
+python -c "import sys; print(sys.executable)"
+pytest -q
+ipython
+pyright
+ruff check .
+ruff format .
+```
+
+## Zellij layout
+```bash
+zellij --layout layouts/cbia.kdl
+```
+
+If panes warn `VIRTUAL_ENV not set`, run:
+```bash
+direnv allow
+```
+and restart the session (or open a new pane).

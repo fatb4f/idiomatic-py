@@ -1,0 +1,20 @@
+layout {
+    pane split_direction="vertical" {
+        pane split_direction="horizontal" {
+            pane name="hx" command="fish" close_on_exit=false {
+                args "-lc" "test -n \"$VIRTUAL_ENV\" || echo 'WARNING: VIRTUAL_ENV not set (did direnv allow?)'; hx"
+            }
+            pane name="yazi" command="fish" close_on_exit=false {
+                args "-lc" "test -n \"$VIRTUAL_ENV\" || echo 'WARNING: VIRTUAL_ENV not set (did direnv allow?)'; yazi"
+            }
+        }
+        pane split_direction="horizontal" {
+            pane name="repl" command="fish" close_on_exit=false {
+                args "-lc" "test -n \"$VIRTUAL_ENV\" || echo 'WARNING: VIRTUAL_ENV not set (did direnv allow?)'; ipython"
+            }
+            pane name="tests" command="fish" close_on_exit=false {
+                args "-lc" "test -n \"$VIRTUAL_ENV\" || echo 'WARNING: VIRTUAL_ENV not set (did direnv allow?)'; echo 'Run: just test' && bash"
+            }
+        }
+    }
+}
