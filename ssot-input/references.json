@@ -1,6 +1,6 @@
 {
   "manifest_id": "python-cbia-contract-pipelines-v1-refs",
-  "generated_at": "2025-12-24T17:04:11Z",
+  "generated_at": "2025-12-24T00:00:00Z",
   "refs": [
     {
       "ref_id": "python-typing-docs",
@@ -43,6 +43,39 @@
       "retrieval_mode": "no_snapshot",
       "tags": [
         "testing",
+        "verification"
+      ]
+    },
+    {
+      "ref_id": "python-import-system-docs",
+      "title": "Python import system documentation",
+      "url": "https://docs.python.org/3/reference/import.html",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "imports",
+        "python_core",
+        "packaging"
+      ]
+    },
+    {
+      "ref_id": "python-packaging-guide",
+      "title": "Python Packaging User Guide",
+      "url": "https://packaging.python.org/",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "packaging",
+        "venv",
+        "dependency_management"
+      ]
+    },
+    {
+      "ref_id": "ruff-docs",
+      "title": "Ruff documentation",
+      "url": "https://docs.astral.sh/ruff/",
+      "retrieval_mode": "no_snapshot",
+      "tags": [
+        "linting",
+        "formatting",
         "verification"
       ]
     }
