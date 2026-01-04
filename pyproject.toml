@@ -4,12 +4,7 @@ version = "0.1.0"
 description = "CBIA Python learning track tooling (uv + direnv activated venv)"
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = [
-  "ipython>=8.0",
-  "pytest>=8.0",
-  "ruff>=0.5",
-  "pyright>=1.1",
-]
+dependencies = ["ipython>=8.0", "pytest>=8.0", "ruff>=0.5", "pyright>=1.1"]
 
 [tool.pytest.ini_options]
 addopts = "-q"
@@ -27,3 +22,6 @@ ignore = ["E501"]
 typeCheckingMode = "standard"
 pythonVersion = "3.11"
 reportMissingTypeStubs = false
+
+[tool.uv.sources]
+algoctrl = { path = "algoctrl" }

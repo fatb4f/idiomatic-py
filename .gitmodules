@@ -1,3 +1,6 @@
 [submodule "ssot"]
 	path = ssot
 	url = https://github.com/fatb4f/ssot-template.git
+[submodule "algoctrl"]
+	path = algoctrl
+	url = https://github.com/fatb4f/algoctrl_tmpl
